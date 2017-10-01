@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    {% for todo in todos %}
+      id: {{todo.id}}<br />
+      title: {{todo.title}}<br />
+      description: {{todo.description}}<br />
+      deadline: {{todo.deadline|date}}<br />
+      done: {% if todo.done %}yes{% else %}no{% endif %}<br />
+      <br />
+    {% endfor %}
+
+  </body>
+</html>
